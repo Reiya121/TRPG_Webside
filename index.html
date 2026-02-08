@@ -1,38 +1,58 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-        }
-        h1 {
-            color: #333;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 10px;
-        }
-        .section {
-            margin: 20px 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHARACTER DATABASE - アクションゲーム キャラクター図鑑</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    
-    <div class="section">
-        <h2>About</h2>
-        <p>こちらにサイトの説明を記載してください。</p>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div>
+        <h1>CHARACTER DATABASE</h1>
+        <div class="header-subtitle">// CLASSIFIED PERSONNEL RECORDS</div>
+      </div>
+      <nav>
+        <button id="btnCharacters" class="active">CHARACTERS</button>
+        <button id="btnOrganizations">ORGANIZATIONS</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Search Container -->
+    <div id="searchContainer" class="search-container">
+      <input 
+        type="text" 
+        id="searchInput" 
+        class="search-input" 
+        placeholder="名前、所属で検索..."
+      >
     </div>
 
-    <div class="section">
-        <h2>Contact</h2>
-        <p>連絡先情報があれば記載してください。</p>
+    <!-- Character Grid -->
+    <div id="charContainer">
+      <div id="characterGrid" class="character-grid"></div>
     </div>
+
+    <!-- Organization Container -->
+    <div id="orgContainer" style="display: none;"></div>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button id="modalClose" class="modal-close">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data/characters.js"></script>
+  <script src="data/organizations.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

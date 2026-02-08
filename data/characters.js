@@ -23,6 +23,6 @@ const characters = [
     weapons: [
       { name: "電磁刀【予定調和】", description: "ヴァナルガンド終極技術発展局製、試作兵装\n神喰らい計画で適合に成功した遺伝子情報を剣に内蔵している" },
     ],
-    imageUrl: "https://github.com/TeamFelNull/TRPG_Website/blob/main/images/char01.png?raw=true"
+    imageUrl: "https://github.com/TeamFelNull/TRPG_Website/blob/main/images/hasuba/char01.png?raw=true"
   }
 ];

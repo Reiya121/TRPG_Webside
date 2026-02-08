@@ -656,6 +656,24 @@ button {
   opacity: 0.8;
 }
 
+.character-name {
+  font-size: 1.8rem;
+  color: var(--primary);
+  text-shadow: var(--glow);
+  line-height: 1.1;
+}
+
+.character-name .name-en {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 3px;
+  margin-top: 0.2rem;
+  text-transform: uppercase;
+  opacity: 0.85;
+  border-left: 2px solid var(--accent);
+  padding-left: 0.5rem;
+}
+
 .weapon-description,
 .ability-description,
 .description {

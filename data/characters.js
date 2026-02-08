@@ -3,7 +3,7 @@ const characters = [
   {
     id: "char01",
     name: "葦原 レイチェル",
-    nameEn: "アシハラ レイチェル",
+    nameEn: "ASHIHARA Rachel",
     birthDate: "11月20日",
     age: 21,
     height: "178cm",

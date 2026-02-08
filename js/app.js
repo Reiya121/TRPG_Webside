@@ -73,6 +73,7 @@ class CharacterDatabase {
     const query = e.target.value.toLowerCase();
     const filtered = characters.filter(char =>
       char.name.toLowerCase().includes(query) ||
+      char.nameEn?.toLowerCase().includes(query) ||
       char.organization.toLowerCase().includes(query)
     );
     this.renderCharacters(filtered);
@@ -92,7 +93,10 @@ class CharacterDatabase {
           <img src="${char.imageUrl}" alt="${char.name}">
         </div>
         <div class="modal-info">
-          <h2>${char.name}</h2>
+          <h2 class="character-name">
+            ${char.name}
+            ${char.nameEn ? `<div class="name-en">${char.nameEn}</div>` : ''}
+          </h2>
           <span class="role">${char.role}</span>
           <div class="organization" onclick="app.navigateToOrganization('${char.organization}')">
             <div class="org-label">ORGANIZATION</div>

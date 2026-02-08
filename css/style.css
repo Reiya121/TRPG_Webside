@@ -681,26 +681,34 @@ button {
 }
 
 header {
-  transition: height 0.3s ease, padding 0.3s ease;
-  overflow: hidden;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--accent);
 }
 
-header.expanded {
-  height: 120px;
-}
-
-header.collapsed {
-  height: 40px;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 header.collapsed .header-title {
+  max-height: 0;
   opacity: 0;
-  pointer-events: none;
+  overflow: hidden;
   transform: translateY(-10px);
+  margin: 0;
+  padding: 0;
 }
 
 .header-title {
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: all 0.25s ease;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .header-toggle {
@@ -709,5 +717,4 @@ header.collapsed .header-title {
   color: var(--primary);
   cursor: pointer;
   font-size: 0.9rem;
-  margin-left: 0.5rem;
 }

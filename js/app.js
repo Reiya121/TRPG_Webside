@@ -21,13 +21,9 @@ class CharacterDatabase {
         const btn = document.getElementById('btnHeaderToggle');
 
         header.classList.toggle('collapsed');
-        header.classList.toggle('expanded');
-
         btn.textContent = header.classList.contains('collapsed') ? '▼' : '▲';
     });
-    document.getElementById('appHeader').addEventListener('dblclick', () => {
-        document.getElementById('btnHeaderToggle').click();
-    });
+
 
     
     // Search

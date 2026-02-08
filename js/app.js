@@ -16,14 +16,13 @@ class CharacterDatabase {
     // Navigation buttons
     document.getElementById('btnCharacters').addEventListener('click', () => this.showCharactersPage());
     document.getElementById('btnOrganizations').addEventListener('click', () => this.showOrganizationsPage());
-    const header = document.getElementById('mainHeader');
-    const toggle = document.getElementById('headerToggle');
+    document.getElementById('btnHeaderToggle').addEventListener('click', () => {
+        const header = document.getElementById('appHeader');
+        const btn = document.getElementById('btnHeaderToggle');
 
-    toggle.addEventListener('click', () => {
-      header.classList.toggle('collapsed');
-      toggle.textContent = header.classList.contains('collapsed') ? '▲' : '▼';
+        header.classList.toggle('collapsed');
+        btn.textContent = header.classList.contains('collapsed') ? '▼' : '▲';
     });
-
 
 
     
@@ -235,46 +234,48 @@ class CharacterDatabase {
   }
 
   showOrganizationDetail(org) {
-    const container = document.getElementById('orgContainer');
+    const modal = document.getElementById('modal');
+    const modalBody = document.getElementById('modalBody');
+
     const members = org.members.map(member => {
       const char = characters.find(c => c.id === member.characterId);
       return { ...member, character: char };
     });
 
-    container.innerHTML = `
-      <button class="btn btn-back" onclick="app.showOrganizationsPage()">← 組織一覧に戻る</button>
-
-      <div class="org-detail-header">
-        <img src="${org.logo}" alt="${org.name}" class="org-detail-logo">
-        <div class="org-detail-info">
+    modalBody.innerHTML = `
+      <div class="modal-header">
+        <div class="modal-image">
+          <img src="${org.logo}" alt="${org.name}">
+        </div>
+        <div class="modal-info">
           <h2>${org.name}</h2>
-          <p class="org-detail-description">${org.description}</p>
+          <span class="role">ORGANIZATION</span>
+          <p class="description">${org.description}</p>
         </div>
       </div>
 
-      <div class="section">
-        <div class="section-title">構成員</div>
-        <ul class="members-list">
-          ${members.map(member => `
-            <li class="member-item" onclick="app.showCharacterDetail(characters.find(c => c.id === '${member.characterId}'))">
-              <div class="member-title">${member.title}</div>
-              <div class="member-name">${member.name}</div>
-            </li>
-          `).join('')}
-        </ul>
+      <div class="modal-body">
+        <div class="section">
+          <div class="section-title">構成員</div>
+          <ul class="members-list">
+            ${members.map(member => `
+              <li class="member-item"
+                onclick="app.showCharacterDetail(
+                  characters.find(c => c.id === '${member.characterId}')
+                )">
+                <div class="member-title">${member.title}</div>
+                <div class="member-name">${member.name}</div>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
       </div>
     `;
-  }
 
-  navigateToOrganization(orgName) {
-    const org = organizations.find(o => o.name === orgName);
-    if (org) {
-      this.closeModal();
-      this.showOrganizationsPage();
-      setTimeout(() => this.showOrganizationDetail(org), 100);
-    }
+    modal.classList.add('active');
   }
 }
+
 
 // Initialize app when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {

@@ -681,26 +681,43 @@ button {
 }
 
 header {
-  position: sticky;
-  top: 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--accent);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header.collapsed .header-title {
+  max-height: 0;
+  opacity: 0;
   overflow: hidden;
-  transition: transform 0.4s ease;
-  z-index: 100;
+  transition:
+    max-height 0.35s ease,
+    opacity 0.25s ease,
+    transform 0.25s ease;
+  margin: 0;
+  padding: 0;
 }
 
-/* 格納状態 */
-header.collapsed {
-  transform: translateY(calc(-100% + 48px)); /* ナビ分だけ残す */
+.header-title {
+  transition: all 0.25s ease;
 }
 
-/* トグルボタン */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .header-toggle {
-  position: absolute;
-  bottom: 4px;
-  right: 1rem;
-  background: transparent;
+  background: none;
   border: none;
   color: var(--primary);
-  font-size: 1.2rem;
   cursor: pointer;
+  font-size: 0.9rem;
 }

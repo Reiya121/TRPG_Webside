@@ -11,6 +11,7 @@ const characters = [
     bloodType: "A型",
     role: "斜歯忍軍",
     organization: "ヴァナルガンド終極技術発展局",
+    quote: "「はぁ...また失敗？ 実験体はすぐに放棄、殺しておきなさい？」",
     publicFace: "研究所局長",
     belief: "我",
     artist: "アルフォルテ(@RAB1201)",

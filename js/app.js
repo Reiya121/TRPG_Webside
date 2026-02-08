@@ -98,6 +98,13 @@ class CharacterDatabase {
             <div class="org-label">ORGANIZATION</div>
             <div class="org-name">${char.organization}</div>
           </div>
+          ${char.quote ? `
+            <div class="character-quote">
+              ${Array.isArray(char.quote)
+                ? char.quote[Math.floor(Math.random() * char.quote.length)]
+                : char.quote}
+            </div>
+          ` : ''}
         </div>
       </div>
 

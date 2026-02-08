@@ -636,3 +636,27 @@ button {
   color: var(--primary);
   margin-bottom: 1rem;
 }
+
+.character-quote {
+  margin-top: 1rem;
+  padding: 0.9rem 1.2rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(255, 0, 110, 0.08);
+  color: var(--accent);
+  font-style: italic;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  text-shadow: 0 0 8px rgba(255, 0, 110, 0.4);
+  position: relative;
+}
+
+.character-quote::before {
+  content: ">> ";
+  opacity: 0.8;
+}
+
+.weapon-description,
+.ability-description,
+.description {
+  white-space: pre-line;
+}

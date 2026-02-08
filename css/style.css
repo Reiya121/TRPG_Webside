@@ -679,3 +679,35 @@ button {
 .description {
   white-space: pre-line;
 }
+
+header {
+  transition: height 0.3s ease, padding 0.3s ease;
+  overflow: hidden;
+}
+
+header.expanded {
+  height: 120px;
+}
+
+header.collapsed {
+  height: 40px;
+}
+
+header.collapsed .header-title {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+}
+
+.header-title {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.header-toggle {
+  background: none;
+  border: none;
+  color: var(--primary);
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}

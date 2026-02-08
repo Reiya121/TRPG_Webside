@@ -16,7 +16,20 @@ class CharacterDatabase {
     // Navigation buttons
     document.getElementById('btnCharacters').addEventListener('click', () => this.showCharactersPage());
     document.getElementById('btnOrganizations').addEventListener('click', () => this.showOrganizationsPage());
+    document.getElementById('btnHeaderToggle').addEventListener('click', () => {
+        const header = document.getElementById('appHeader');
+        const btn = document.getElementById('btnHeaderToggle');
 
+        header.classList.toggle('collapsed');
+        header.classList.toggle('expanded');
+
+        btn.textContent = header.classList.contains('collapsed') ? '▼' : '▲';
+    });
+    document.getElementById('appHeader').addEventListener('dblclick', () => {
+        document.getElementById('btnHeaderToggle').click();
+    });
+
+    
     // Search
     document.getElementById('searchInput').addEventListener('input', (e) => this.handleSearch(e));
 

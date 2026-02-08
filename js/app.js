@@ -208,9 +208,14 @@ class CharacterDatabase {
   }
 
   closeModal() {
-    document.getElementById('modal').classList.remove('active');
+    const modal = document.getElementById('modal');
+    const modalContent = modal.querySelector('.modal-content');
+
+    modal.classList.remove('active');
+    modalContent.classList.remove('org-modal');
     this.selectedCharacter = null;
   }
+
 
   renderOrganizations() {
     const container = document.getElementById('orgContainer');
@@ -236,6 +241,9 @@ class CharacterDatabase {
   showOrganizationDetail(org) {
     const modal = document.getElementById('modal');
     const modalBody = document.getElementById('modalBody');
+    const modalContent = modal.querySelector('.modal-content');
+
+    modalContent.classList.add('org-modal');
 
     const members = org.members.map(member => {
       const char = characters.find(c => c.id === member.characterId);

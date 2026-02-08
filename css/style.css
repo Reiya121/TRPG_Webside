@@ -721,3 +721,11 @@ header.collapsed .header-title {
   cursor: pointer;
   font-size: 0.9rem;
 }
+
+.modal-content {
+  max-width: 800px;
+}
+
+.modal-content.org-modal {
+  max-width: 1000px;
+}

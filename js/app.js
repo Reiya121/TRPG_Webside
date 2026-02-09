@@ -122,7 +122,6 @@ class CharacterDatabase {
           </h2>
           <span class="role">${char.role}</span>
           <div class="organizations">
-            <div class="org-label">ORGANIZATIONS</div>
             ${char.organizations.map(org => `
               <div class="organization"
                    onclick="app.openOrganizationModal('${org.name}')">

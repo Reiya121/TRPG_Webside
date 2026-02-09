@@ -12,7 +12,9 @@ const characters = [
     role: "斜歯忍軍",
     organization: "ヴァナルガンド終極技術発展局",
     quote: "「はぁ...また失敗？ 実験体はすぐに放棄、殺しておきなさい？」",
-    publicFace: "研究所局長",
+    organizations: [
+      { name: "ヴァナルガンド終極技術発展局", role: "所長" },
+    ],
     belief: "我",
     artist: "アルフォルテ(@RAB1201)",
     description: "ヴァナルガンド終極技術発展局の局長\n実験による犠牲を是とし、自己犠牲は嫌う正真正銘のクズ",
@@ -35,7 +37,9 @@ const characters = [
     weight: "48kg",
     bloodType: "A型",
     role: "斜歯忍軍",
-    organization: "ヴァナルガンド終極技術発展局",
+    organizations: [
+      { name: "ヴァナルガンド終極技術発展局", role: "主席研究員" },
+    ],
     quote: "「...はい、実験は完了です。この程度の成果なら、次の段階に移行出来そうです」",
     publicFace: "からくり技師",
     belief: "和",
@@ -59,7 +63,9 @@ const characters = [
     weight: "56kg",
     bloodType: "O型",
     role: "斜歯忍軍",
-    organization: "ヴァナルガンド終極技術発展局",
+    organizations: [
+      { name: "ヴァナルガンド終極技術発展局", role: "第五成功例" },
+    ],
     quote: "「おぉ！もしかすれば、月間斜歯の今アツい若手シノビ達10選にも選ばれるかもしれぬ...！！」",
     publicFace: "大学生",
     belief: "我",
@@ -83,7 +89,10 @@ const characters = [
     weight: "80kg",
     bloodType: "None",
     role: "鍔鑿組",
-    organization: "國立家",
+    organizations: [
+      { name: "國立家", role: "現所属" },
+      { name: "BLACK VEIL", role: "協力者" }
+    ],
     quote: "「パパ！お姉ちゃん！！大好き！！！」",
     publicFace: "AI",
     belief: "情",

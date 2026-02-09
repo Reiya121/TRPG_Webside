@@ -730,3 +730,27 @@ header.collapsed .header-title {
 .modal-content.org-modal {
   max-width: 1000px;
 }
+
+.organizations {
+  margin: 1rem 0;
+}
+
+.organization {
+  background: var(--card-bg);
+  border-left: 4px solid var(--primary);
+  padding: 0.8rem;
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.organization:hover {
+  background: rgba(0, 212, 255, 0.1);
+  border-left-color: var(--accent);
+}
+
+.org-role {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}

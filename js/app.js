@@ -91,7 +91,7 @@ class CharacterDatabase {
     const filtered = characters.filter(char =>
       char.name.toLowerCase().includes(query) ||
       char.nameEn?.toLowerCase().includes(query) ||
-      char.organization.toLowerCase().includes(query)
+      char.organizations?.some(org =>org.name.toLowerCase().includes(query))
     );
     this.renderCharacters(filtered);
   }
@@ -102,7 +102,13 @@ class CharacterDatabase {
     const modalBody = document.getElementById('modalBody');
 
     // Get related characters
-    const relatedChars = characters.filter(c => c.organization === char.organization && c.id !== char.id);
+    const orgNames = char.organizations.map(o => o.name);
+
+    const relatedChars = characters.filter(c =>
+      c.id !== char.id &&
+      c.organizations?.some(o => orgNames.includes(o.name))
+    );
+
 
     modalBody.innerHTML = `
       <div class="modal-header">
@@ -115,7 +121,7 @@ class CharacterDatabase {
             ${char.nameEn ? `<div class="name-en">${char.nameEn}</div>` : ''}
           </h2>
           <span class="role">${char.role}</span>
-          <div class="organization"onclick="app.openOrganizationModal('${char.organization}')">
+          <div class="organization" onclick="app.openOrganizationModal('${char.organization}')">
             <div class="org-label">ORGANIZATION</div>
             <div class="org-name">${char.organization}</div>
           </div>

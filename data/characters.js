@@ -117,7 +117,7 @@ const characters = [
     bloodType: "判別不能",
     role: "鍔鑿組",
     organizations: [
-      { name: "ヴァナルガンド終極技術発展局", role: "第一成功例" },
+      { name: "ヴァナルガンド終極技術発展局", role: "第一成功例/警備隊長" },
     ],
     quote: "「生存第一！それが隊長命令だよ！」",
     publicFace: "警備部隊長",
@@ -171,6 +171,7 @@ const characters = [
     bloodType: "B型",
     role: "指矩班",
     organizations: [
+      { name: "ヴァナルガンド終極技術発展局", role: "警備長" },
       { name: "加賀瀬家", role: "父" },
     ],
     quote: "「アイツの忘れ形見...何が何でも守って見せるさ」",
@@ -217,7 +218,7 @@ const characters = [
     id: "char09",
     name: "R・A・B",
     nameEn: "Reiya・Al・Blitzer",
-    birthDate: "	12月01日",
+    birthDate: "12月01日",
     age: "■■",
     height: "160cm",
     weight: "69kg",
@@ -238,5 +239,31 @@ const characters = [
       { name: "ディナイアルワン", description: "特殊な機能を備えたアサルトライフル\n変形し、弓とすることも出来れば、ストックを引き抜くことで刀としても使用できる逸品" },
     ],
     imageUrl: "https://github.com/TeamFelNull/TRPG_Website/blob/main/images/hasuba/char09.png?raw=true"
+  },
+  {
+    id: "char10",
+    name: "鍵谷 真琴",
+    nameEn: "KAGIYA Makoto",
+    birthDate: "6月30日",
+    age: "19",
+    height: "162cm",
+    weight: "54kg",
+    bloodType: "O型",
+    role: "鍵盤勢",
+    organizations: [
+      { name: "所属なし", role: "" },
+    ],
+    quote: "「さぁ、君の人生(ゲーム)を見せてくれ」",
+    publicFace: "大学生/社長",
+    belief: "我",
+    artist: "アルフォルテ(@RAB1201)",
+    description: "ゲームプログラマーをしている天才JD社長\n様々な研究に手を出し、全てをゲーム開発へつぎ込んでいる\nゲーム開発の為なら何でもする狂人\n他人への嫉妬などはしないが、他人の人生をゲームとして扱いたがる癖がある",
+    abilities: [
+      { name: "幻夢計画", description: "世界一のゲームを作る、そんな絵空言にも等しい幻の様な夢の計画\n第一計画は、シノビの世を模したゲームを作ること\nユーザーは、ゲーム内で得たあらゆる経験を自分にインストールすることが出来、誰でも主人公になれる...\nという現実侵蝕型次世代ゲーム\nそんなゲームを作る為にも、本来自分に使えない忍法を使用する実験を行っている" },
+    ],
+    weapons: [
+      { name: "バーチャルキーボード【阿頼耶識】", description: "どこでも使える電子キーボード\n脊髄神経と接続されており、ハンドフリーでの入力も可能" },
+    ],
+    imageUrl: "https://github.com/TeamFelNull/TRPG_Website/blob/main/images/hasuba/char10.png?raw=true"
   },
 ];

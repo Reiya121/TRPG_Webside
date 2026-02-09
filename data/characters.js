@@ -61,7 +61,7 @@ const characters = [
     age: 23,
     height: "167cm",
     weight: "56kg",
-    bloodType: "O型",
+    bloodType: "判別不能",
     role: "斜歯忍軍",
     organizations: [
       { name: "ヴァナルガンド終極技術発展局", role: "第五成功例" },
@@ -104,5 +104,31 @@ const characters = [
       { name: "神機【模機】", description: "グリム・インダストリアル製の試作特殊生体模擬武装\n使い手と同様の妖魔の遺伝子をコアに組み込み、遺伝子適合率をある程度補強してくれる機能を持つ" },
     ],
     imageUrl: "https://github.com/TeamFelNull/TRPG_Website/blob/main/images/hasuba/char04.png?raw=true"
+  },
+  {
+    id: "char05",
+    name: "神喰 梓",
+    nameEn: "KANBAMI Azusa",
+    birthDate: "12月13日",
+    age: 21,
+    height: "160cm",
+    weight: "56kg",
+    bloodType: "判別不能",
+    role: "斜歯忍軍",
+    organizations: [
+      { name: "ヴァナルガンド終極技術発展局", role: "第一成功例" },
+    ],
+    quote: "「生存第一！それが隊長命令だよ！」",
+    publicFace: "警備部隊長",
+    belief: "忠",
+    artist: "アルフォルテ(@RAB1201)",
+    description: "【ヴァナルガンド終極技術発展局】による【神喰らい】計画の第一成功例の女性\n妖魔の力を搭載した武器を使用可能で、血を媒介に対象の力を吸収することもできる\n仲間との絆や友情を何よりも重視し、任務よりも命を優先する性格で仲間を優先し、自らを疎かにする為、部隊員に心配されている\nまた、魔王流の家系出身だが、妖魔の力を遺伝させることが出来ず、出来損ないとして家を出た過去がある",
+    abilities: [
+      { name: "BE渇蝕遺伝子：適合率84%", description: "複数の妖魔の遺伝子を混ぜ、調整を行った遺伝子\n神喰らい計画の最初期の実験で作られた物で、当時は妖魔の純度が遺伝子の質に影響を及ぼすと発覚しておらず、複数の妖魔の力を操ることを目標に、複数の遺伝子を混ぜた結果、身体強化などは行われているが特殊な力などは発現しなかった" },
+    ],
+    weapons: [
+      { name: "神機【想魔】", description: "グリム・インダストリアル製の試作特殊生体武装\n様々な妖魔の遺伝子をコアに組み込み、BE渇蝕遺伝子を強制的に抑えつけている" },
+    ],
+    imageUrl: "https://github.com/TeamFelNull/TRPG_Website/blob/main/images/hasuba/char05.png?raw=true"
   },
 ];

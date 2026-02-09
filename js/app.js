@@ -121,12 +121,20 @@ class CharacterDatabase {
             ${char.nameEn ? `<div class="name-en">${char.nameEn}</div>` : ''}
           </h2>
           <span class="role">${char.role}</span>
+          ${char.quote ? `
+            <div class="character-quote">
+              ${Array.isArray(char.quote)
+                ? char.quote[Math.floor(Math.random() * char.quote.length)]
+                : char.quote}
+            </div>
+          ` : ''}
+          
           <div class="organizations">
             ${char.organizations.map(org => `
               <div class="organization"
                    onclick="app.openOrganizationModal('${org.name}')">
                 <div class="org-name">${org.name}</div>
-            
+          
                 ${org.role ? `
                   <div class="org-tags">
                     ${Array.isArray(org.role)
@@ -138,13 +146,6 @@ class CharacterDatabase {
               </div>
             `).join('')}
           </div>
-          ${char.quote ? `
-            <div class="character-quote">
-              ${Array.isArray(char.quote)
-          ? char.quote[Math.floor(Math.random() * char.quote.length)]
-          : char.quote}
-            </div>
-          ` : ''}
         </div>
       </div>
 
